@@ -10,12 +10,15 @@ import java.util.List;
 @Service
 public class UserService {
     List<User> userList = new ArrayList<>();
+    private Long id = 1L;
 
     public List<User> fetchAllUsers(){
         return userList;
     }
 
     public List<User> addUser(User user){
+        ;
+        user.setId(id++);
         userList.add(user);
         return userList;
     }
