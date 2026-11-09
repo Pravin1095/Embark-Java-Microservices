@@ -16,6 +16,11 @@ public class UserService {
         return userList;
     }
 
+    public User fetchUser(Long userId){
+        List<User> getUser = userList.stream().filter(u->u.getId()==userId).toList();
+        return getUser.getFirst();
+    }
+
     public List<User> addUser(User user){
         ;
         user.setId(id++);
