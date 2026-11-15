@@ -2,6 +2,8 @@ package com.app.ecom.service;
 
 
 import com.app.ecom.User;
+import org.apache.catalina.mapper.Mapper;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,9 +25,15 @@ public class UserService {
     }
 
     public List<User> addUser(User user){
-        ;
         user.setId(id++);
         userList.add(user);
         return userList;
+    }
+
+    public boolean updateUser(Long id , User updatedUser) {
+       return userList.stream().filter(u->u.getId().equals(id)).findFirst().map(existingUser->{existingUser.setFirstName(updatedUser.getFirstName());
+       existingUser.setLastName(updatedUser.getLastName());
+       return true;
+       }).orElse(false);
     }
 }
