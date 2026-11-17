@@ -1,13 +1,12 @@
 package com.app.ecom.controller;
 
-import com.app.ecom.User;
+import com.app.ecom.model.User;
 import com.app.ecom.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
