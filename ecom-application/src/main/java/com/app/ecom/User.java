@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor //NoArgs constructor is mandatory because hibernate instantiate User objects by calling a no argument constructor
 
-@Entity(name="user-table")
+@Entity(name="user_table")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

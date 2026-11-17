@@ -14,8 +14,8 @@ import java.util.Optional;
 
 @Service
 public class UserService {
-    List<User> userList = new ArrayList<>();
-    private Long id = 1L;
+//    List<User> userList = new ArrayList<>();
+//    private Long id = 1L;
 
     @Autowired
     private UserRepository userrepository;
